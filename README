@@ -1,0 +1,28 @@
+timeto
+======
+
+Install
+-------
+
+$ go get go.spiff.io/timeto
+
+
+Usage
+-----
+
+  timeto <time>...
+
+For example:
+
+  $ timeto 12pm
+  197     11854   11854782455000  3h17m34.782455s
+
+timeto will print the number of minutes, seconds, nanoseconds, and Go duration
+string until (or after, if the numbers are negative) the given time. Each field
+of the output is tab-delimited.
+
+
+License
+-------
+
+timeto is licensed under the two-clause BSD license.
