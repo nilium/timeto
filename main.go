@@ -67,6 +67,9 @@ func main() {
 			t = t.UTC()
 			if t.Year() == 0 && t.Day() == 1 && t.Month() == 1 {
 				t = time.Date(now.Year(), now.Month(), now.Day(), t.Hour(), t.Minute(), t.Second(), t.Nanosecond(), now.Location())
+				if t.Before(now) {
+					t = t.AddDate(0, 0, 1)
+				}
 			}
 			d := t.Sub(now)
 			fmt.Printf("%d\t%d\t%d\t%v\n", int64(d/time.Minute), int64(d/time.Second), int64(d), d)
