@@ -72,7 +72,7 @@ func main() {
 				}
 			}
 			d := t.Sub(now)
-			fmt.Printf("%d\t%d\t%d\t%v\n", int64(d/time.Minute), int64(d/time.Second), int64(d), d)
+			fmt.Printf("%d\t%d\t%d\t%v\t%d\t%d\n", int64(d/time.Minute), int64(d/time.Second), int64(d), d, t.Unix(), t.UnixNano())
 		}
 	}
 }
